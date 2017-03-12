@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Simple TODO Lists";
+}
+
+<div id="list-container">
+    <div class="container task-wrap">
+        <div class="row title">
+            <div class="col-md-1">  </div>
+            <div class="col-md-9">
+                <label>Complete the test task for Ruby Garage</label>
+            </div>
+            <div class="col-md-2 controls">
+                <div class="delete-list"></div><hr class="separator m-0 s2" />
+                <div class="edit-list"></div>
+            </div>
+        </div>
+
+        <div class="row add-task">
+            <div class="col-md-1">  </div>
+            <div class="col-md-9 p-r-0 p-l-5">
+                <input type="text" name="TaskName" placeholder="Start typing here to create a task..." class="form-control" />
+            </div>
+            <div class="col-md-2 p-r-10 p-l-0">
+                <button class="form-control">Add Task</button>
+            </div>
+        </div>
+
+        <div class="task-list">
+            <hr />
+            @*<div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">Open this mock-up in Adobe Fireworks</p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div><img src="~/Content/Images/move_task.png" alt="move task" /></div>
+                        <hr class="separator m-0" />
+                        <div><img src="~/Content/Images/edit_task.png" alt="edit task" /></div>
+                        <hr class="separator m-0" />
+                        <div><img src="~/Content/Images/delete_task.png" alt="delete task" /></div>
+                    </div>
+                </div>
+            </div>*@
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Edit data</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="changed-text" class="control-label">New text:</label>
+                    <textarea class="form-control" id="changed-text"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="add-list">
+    <button class="btn"  id="btn-add-project">
+        Add TODO List
+    </button>
+</div>
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/listManager")
+}

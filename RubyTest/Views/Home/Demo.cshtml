@@ -1,0 +1,221 @@
+﻿
+@{
+    ViewBag.Title = "Demonstration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    ul.nav a {
+        color: orangered;
+    }
+</style>
+<div id="list-container">
+    <div class="container task-wrap">
+        <div class="row title">
+            <div class="col-md-1">  </div>
+            <div class="col-md-9">
+                <label>Welcome to a simpliest TODO lists manager</label>
+            </div>
+            <div class="col-md-2 controls">
+                <div class="delete-list"></div><hr class="separator m-0 s2" />
+                <div class="edit-list"></div>
+            </div>
+        </div>
+
+        <div class="row add-task">
+            <div class="col-md-1">  </div>
+            <div class="col-md-9 p-r-0 p-l-5">
+                <input type="text" name="TaskName" placeholder="Start typing here to create a task..." class="form-control" />
+            </div>
+            <div class="col-md-2 p-r-10 p-l-0">
+                <button id="btn-add-task" class="form-control">Add Task</button>
+            </div>
+        </div>
+
+        <div class="task-list">
+            <hr />
+
+            <div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">Register or login to site </p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div class="move-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="edit-task" data-toggle="modal" data-target="#myModal"></div>
+                        <hr class="separator m-0" />
+                        <div class="delete-task"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">Create your lists with things you want or should do</p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div class="move-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="edit-task" data-toggle="modal" data-target="#myModal"></div>
+                        <hr class="separator m-0" />
+                        <div class="delete-task"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">Add, edit, remove, prioterize your tasks</p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div class="move-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="edit-task" ></div>
+                        <hr class="separator m-0" />
+                        <div class="delete-task"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">
+                        Mark tasks as done
+                    </p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div class="move-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="edit-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="delete-task"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container task-wrap">
+        <div class="row title">
+            <div class="col-md-1">  </div>
+            <div class="col-md-9">
+                <label>For Home</label>
+            </div>
+            <div class="col-md-2 controls">
+                <div class="delete-list"></div><hr class="separator m-0 s2" />
+                <div class="edit-list"></div>
+            </div>
+        </div>
+
+        <div class="row add-task">
+            <div class="col-md-1">  </div>
+            <div class="col-md-9 p-r-0 p-l-5">
+                <input type="text" name="TaskName" placeholder="Start typing here to create a task..." class="form-control" />
+            </div>
+            <div class="col-md-2 p-r-10 p-l-0">
+                <button id="add-task-button" class="form-control">Add Task</button>
+            </div>
+        </div>
+
+        <div class="task-list">
+            <hr />
+            <div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">Buy a milk</p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div class="move-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="edit-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="delete-task"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">Call Mam</p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div class="move-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="edit-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="delete-task"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">Clean the room</p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div class="move-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="edit-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="delete-task"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row task">
+                <div class="col-md-1">
+                    <label><input type="checkbox" class="checkbox" /><i></i></label>
+                </div>
+                <div class="col-md-9 border-line">
+                    <p class="text-left">Repair the DVD Player</p>
+                </div>
+                <div class="col-md-2 controls">
+                    <div>
+                        <div class="move-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="edit-task"></div>
+                        <hr class="separator m-0" />
+                        <div class="delete-task"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="add-list">
+    <button class="btn" id="btn-add-project">
+        Add TODO List
+    </button>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/demoPage.js"></script>
+} 
